@@ -1,0 +1,25 @@
+[package]
+name = "rust-live-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+criterion = { version = "0.4", features = ["html_reports"] }
+
+[[bench]]
+name = "test_benchmark"
+harness = false
+
+[dependencies]
+actix-web = "4"
+actix-ws = "0.2.5"
+derive-getters = "0.3.0"
+env_logger = "0.10.0"
+futures-util = "0.3.28"
+log = "0.4.19"
+serde = { version = "1.0.171", features = ["derive"] }
+serde_json = "1.0.102"
+tokio = { version = "1", features = ["rt", "net", "macros", "sync", "rt-multi-thread"] }
+tokio-util = "0.7.8"
